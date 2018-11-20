@@ -48,12 +48,12 @@
                 android:text="colour" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnSensorList"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:onClick="setIntent"
-                android:text="Button"
+                android:text="Sens"
                 app:layout_column="3"
                 app:layout_row="0" />
         </android.support.v7.widget.GridLayout>
