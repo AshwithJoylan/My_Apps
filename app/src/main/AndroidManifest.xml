@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.shreyas.benchmarkapp">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -10,6 +11,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:name=".App"
@@ -38,7 +42,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".ButtonChangeActivity" />
-        <activity android:name=".SensorListActivity"></activity>
+        <activity android:name=".SensorListActivity" />
+
+        <receiver android:name=".utils.MyBroadcastReciever">
+            <intent-filter>
+                <action android:name="android.provider.telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".TextToSpeechActivity" />
+        <activity android:name=".SongListActivity" />
+        <activity android:name=".SpeechToTextActivity"></activity>
     </application>
 
 </manifest>

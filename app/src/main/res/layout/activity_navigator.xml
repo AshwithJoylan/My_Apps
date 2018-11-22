@@ -56,6 +56,26 @@
                 android:text="Sens"
                 app:layout_column="3"
                 app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btntooSpeech"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="spch"
+                android:onClick="setIntent"
+
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <Button
+                android:onClick="setIntent"
+                android:id="@+id/btnSongList"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:text="SL"
+                app:layout_column="1"
+                app:layout_row="1" />
         </android.support.v7.widget.GridLayout>
     </LinearLayout>
 
